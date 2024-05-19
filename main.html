@@ -15,7 +15,7 @@
 
       incrementBtn.addEventListener('click', () => {
         const currentValue = parseInt(counterElement.textContent);
-        alert(`Current value: ${currentValue}`);  // Display the current value
+        alert(currentValue);  // Display the current value without any text
         counterElement.textContent = currentValue + 1;  // Increment the counter
       });
     });
