@@ -8,6 +8,17 @@
 <body>
   <p id="counter">0</p>
   <button id="incrementBtn">Increment</button>
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const counterElement = document.getElementById('counter');
+      const incrementBtn = document.getElementById('incrementBtn');
+
+      incrementBtn.addEventListener('click', () => {
+        const currentValue = parseInt(counterElement.textContent);
+        alert(`Current value: ${currentValue}`);  // Display the un-incremented value
+        counterElement.textContent = currentValue + 1;  // Increment the counter
+      });
+    });
+  </script>
 </body>
 </html>
